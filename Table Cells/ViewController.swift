@@ -22,7 +22,13 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         tableView.register(NameAndColorCell.self, forCellReuseIdentifier: cellTableIdentifier)
+        
+        // using xib
+        let xib = UINib(nibName: "NameAndColorCell", bundle: nil)
+        tableView.register(xib, forCellReuseIdentifier: cellTableIdentifier)
+        tableView.rowHeight = 65
     }
 
     override func didReceiveMemoryWarning() {

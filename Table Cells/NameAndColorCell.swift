@@ -9,8 +9,8 @@
 import UIKit
 
 class NameAndColorCell: UITableViewCell {
-    var nameLabel: UILabel!
-    var colorLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var colorLabel: UILabel!
     var name: String = "" {
         didSet {
             if (name != oldValue) {
@@ -37,7 +37,7 @@ class NameAndColorCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    /*override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         let nameLabelRect = CGRect(x: 0, y: 5, width: 70, height: 15)
@@ -65,6 +65,6 @@ class NameAndColorCell: UITableViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
+    }*/
 
 }
